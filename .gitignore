@@ -1,0 +1,7 @@
+*.suo
+*.class
+
+.idea/
+out/
+bin/
+obj/
