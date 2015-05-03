@@ -14,7 +14,7 @@ btn.onclick = function () {
     var t = setInterval (function () {
         document.getElementById("fight_btn").click();
     } , 1000);
-    setTimeout(function() {
+    setTimeout(function () {
         clearInterval(t);
     } , c * 1000);
 };

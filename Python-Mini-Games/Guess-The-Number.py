@@ -1,14 +1,9 @@
-#"Guess the number" mini-project
-# input will come from buttons and an input field
-# all output for the game will be printed in the console
-
 import simplegui
 import random
 import math
 
 # helper function to start and restart the game
 def new_game():
-    # initialize global variables used in your code here
     global num_range, secret_number, guesses_remaining
     
     secret_number = random.randrange(0, num_range)
@@ -20,21 +15,18 @@ def new_game():
     print "New game with range from 0 to", num_range
     print "Remaining guesses:", guesses_remaining
 
-# define event handlers for control panel
 def range100():
-    # button that changes the range to [0,100) and starts a new game 
     global num_range
     num_range = 100
     new_game()
 
-def range1000():
-    # button that changes the range to [0,1000) and starts a new game     
+def range1000():  
     global num_range
     num_range = 1000
     new_game()
     
 def input_guess(guess):
-    # main game logic goes here	
+    # main game logic  here	
     global secret_number, guesses_remaining
     
     guess_num = int(guess)
