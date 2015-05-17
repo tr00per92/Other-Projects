@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbcSlider.DemoApp", "AbcSlider.DemoApp\AbcSlider.DemoApp.csproj", "{0EA4A973-AC9C-43C0-913E-1C9A685717B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbcControls", "AbcControls\AbcControls.csproj", "{6E657B06-DEAB-4FB9-B2D8-218E3241231E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbcSlider.UnitTests", "AbcSlider.UnitTests\AbcSlider.UnitTests.csproj", "{1F7ADA8B-9D1D-4BDB-BBBE-D4073681B239}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EA4A973-AC9C-43C0-913E-1C9A685717B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA4A973-AC9C-43C0-913E-1C9A685717B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA4A973-AC9C-43C0-913E-1C9A685717B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA4A973-AC9C-43C0-913E-1C9A685717B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E657B06-DEAB-4FB9-B2D8-218E3241231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E657B06-DEAB-4FB9-B2D8-218E3241231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E657B06-DEAB-4FB9-B2D8-218E3241231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E657B06-DEAB-4FB9-B2D8-218E3241231E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F7ADA8B-9D1D-4BDB-BBBE-D4073681B239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7ADA8B-9D1D-4BDB-BBBE-D4073681B239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7ADA8B-9D1D-4BDB-BBBE-D4073681B239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7ADA8B-9D1D-4BDB-BBBE-D4073681B239}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

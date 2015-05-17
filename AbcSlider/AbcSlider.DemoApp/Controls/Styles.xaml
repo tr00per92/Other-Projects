@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:abcControls="clr-namespace:AbcControls;assembly=AbcControls"
+                    xmlns:converters="clr-namespace:AbcSlider.DemoApp.Converters">
+
+    <converters:StyleConverter x:Key="StyleConverter" />
+    
+    <Style x:Key="RedCircleThumb" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Ellipse Height="20" Width="20">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="Red" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MagentaSquareThumb" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Rectangle Width="20" Height="20" Fill="DarkMagenta" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="GreenRectanglesThumb" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Ellipse Height="10" Width="30">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="Green" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BlueGreenSlider" TargetType="abcControls:AbcSlider">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle HorizontalAlignment="Stretch" Height="4" Fill="Blue" />
+                        <Track Height="20" Name="PART_Track">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource RedCircleThumb}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RedMagentaSlider" TargetType="abcControls:AbcSlider">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid Background="Yellow">
+                        <Rectangle HorizontalAlignment="Stretch" Height="3" Fill="Red" />
+                        <Track Height="20" Name="PART_Track">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource MagentaSquareThumb}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="OrangeGreenSlider" TargetType="abcControls:AbcSlider">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid Background="DarkOrange">
+                        <Rectangle HorizontalAlignment="Stretch" Height="6" Fill="Orchid" />
+                        <Track Height="20" Name="PART_Track">
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource GreenRectanglesThumb}" />
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+    

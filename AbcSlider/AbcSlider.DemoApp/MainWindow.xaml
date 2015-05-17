@@ -1,0 +1,50 @@
+﻿<Window x:Class="AbcSlider.DemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:AbcSlider.DemoApp.Controls"
+        xmlns:viewModels="clr-namespace:AbcSlider.DemoApp.ViewModels"
+        Title="AbcSliderDemo" Height="330" Width="360">
+
+    <Window.DataContext>
+        <viewModels:MainViewModel />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModels:StackPanelDemoViewModel}">
+            <controls:StackPanelDemoControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:GridImageDemoViewModel}">
+            <controls:GridImageDemoControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ListBoxDemoViewModel}">
+            <controls:ListBoxDemoControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:TemplatesDemoViewModel}">
+            <controls:TemplatesDemoControl />
+        </DataTemplate>
+    </Window.Resources>
+
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+            <RadioButton Margin="4"
+                         Content="BasicDemo"
+                         Command="{Binding ChangeCurrentViewModelCommand}"
+                         CommandParameter="StackPanelDemoViewModel"
+                         IsChecked="True" />
+            <RadioButton Margin="4" 
+                         Content="ImageOpacity" 
+                         Command="{Binding ChangeCurrentViewModelCommand}"
+                         CommandParameter="GridImageDemoViewModel" />
+            <RadioButton Margin="4" 
+                         Content="ListBox" 
+                         Command="{Binding ChangeCurrentViewModelCommand}"
+                         CommandParameter="ListBoxDemoViewModel" />
+            <RadioButton Margin="4" 
+                         Content="Templates" 
+                         Command="{Binding ChangeCurrentViewModelCommand}"
+                         CommandParameter="TemplatesDemoViewModel" />
+        </StackPanel>
+        
+        <ContentControl Content="{Binding CurrentViewModel}" />
+    </StackPanel>
+</Window>
