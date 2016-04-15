@@ -1,0 +1,14 @@
+﻿@model AuthorshipComparer.Web.Models.TextInputModel
+@{
+    ViewBag.Title = "Enter Text";
+}
+
+<h2>@ViewBag.Title</h2>
+<br/>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.TextAreaFor(m => m.Text, new { @class = "form-control", rows = 5, cols = 10 })
+    <br/>
+    <input class="btn btn-default" type="submit" value="Submit"/>
+}

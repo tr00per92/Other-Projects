@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AuthorshipComparer.Web.Models.TextViewModel>
+@{
+    ViewBag.Title = "My Texts";
+}
+
+<h2>@ViewBag.Title</h2>
+<br/>
+<div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TextId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SimilarityScore)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TextId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SimilarityScore)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.TextId })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

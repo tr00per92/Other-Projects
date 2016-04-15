@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="AuthorshipComparer.Worker" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GoogleApiKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AIzaSyBu-euWo2uINygJR3Gm5NkIMn_Qm3kz8-k</Value>
+    </Setting>
+    <Setting Name="SearchEngineId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">011353845426409043661:lgkuggq-5o4</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

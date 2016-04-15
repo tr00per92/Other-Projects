@@ -1,0 +1,46 @@
+﻿@model AuthorshipComparer.Web.Models.TextDetailsViewModel
+@{
+    ViewBag.Title = "Text Details";
+}
+
+<h2>@ViewBag.Title</h2>
+<h4>Identifier: @Model.TextId</h4>
+<h4>Similarity Score: @Model.SimilarityScore</h4>
+<br/>
+
+<div class="row">
+    <div class="col-md-8">
+        @Html.DisplayFor(m => m.Text)
+    </div>
+</div>
+
+@if (Model.SimilarLinks.Any())
+{
+    <br/>
+    <h4>Similar Links</h4>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table">
+                <tr>
+                    <th>
+                        URL
+                    </th>
+                    <th>
+                        Similarity Score
+                    </th>
+                </tr>
+                @foreach (var similarLink in Model.SimilarLinks)
+                {
+                    <tr>
+                        <td>
+                            <a href="@similarLink.Url" target="_blank">@similarLink.Url</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => similarLink.SimilarityScore)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+}
